@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %} View All Projects {% endblock %}
+
+
+{% block body %}
+
+{% if projects | length < 1 %}
+<div class="text-center">
+    <h3 style="margin-top: 100px;">All projects </h3>
+    <a class="btn btn-success" href="/load-projects">Add</a>
+</div>
+
+{% else %}
+
+<div class="text-center" style="margin-top: 100px;">
+    <a class="btn btn-success" style="padding: 20px 10px; font-size: 20px;" href="/load-projects">Add Project</a>
+</div>
+
+<table class="table table-dark table-hover" style="margin-top: 60px;">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Location</th>
+            <th scope="col">Price</th>
+            <th scope="col">Display Project</th>
+            <th scope="col">Project Image</th>
+            <th scope="col">Functions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for project in projects %}
+
+        <tr>
+            <th scope="row">{{ project.id }}</th>
+            <td>{{ project.title }}</td>
+            <td>{{ project.location }}</td>
+            <td>{{ project.price }}</td>
+            <td>{{ project.display_project }}</td>
+            <td><img src="{{ project.product_image }}" alt="" style="height: 50px; width: 50px; border-radius: 2px;"></td>
+
+
+            <td>
+                <a class="btn btn-info" href="/update-project/{{ project.id }}">Update</a>
+                <a class="btn btn-warning" href="/delete-project/{{ project.id }}">Delete</a>
+            </td>
+
+        </tr>
+
+
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endif %}
+
+
+{% endblock %}

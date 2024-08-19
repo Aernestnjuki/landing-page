@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.d-flex .btn{
+    background: orange;
+    border: 2px solid orange;
+    border-radius: 8px;
+    color: #fff;
+}
+.d-flex .btn:hover{
+    background: rgb(228, 150, 7);
+    border: 2px solid rgb(228, 150, 7);
+}
+
+.alert{
+    z-index: 10000000;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+.wrapper{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display: none;
+}
+
+.wrapper-content{
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 22%);
+}
+
+.wrapper-content .close{
+    cursor: pointer;
+    height: 3.5vh;
+}
+
+.background-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+
+.navbar-nav a{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.navbar-light .navbar-brand{
+    color: rgb(228, 150, 7);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+}
+
+.carousel-caption{
+    bottom: 250px;
+    z-index: 2;
+}
+
+.carousel-caption h5{
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.carousel-caption a{
+    text-transform: uppercase;
+    text-decoration: none;
+    background: rgb(228, 150, 7);
+    padding: 10px 20px;
+    font-size: 14px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+
+.carousel-inner:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;                         
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+#who-am-i h2,
+#how-to-invest h2,
+#blog h2,
+#projects h2{
+    font-size: 40px;
+    color: rgb(228, 150, 7);
+}
+
+#who-am-i p{
+    font-size: 20px;
+}
+
+
+#projects ul{
+    list-style: none;
+    display: flex;
+}
+
+#projects ul li{
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+#projects ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+#projects .card img{
+    height: 200px;
+}
+
+#get-intouch h2{
+    font-size: 40px;
+    color: rgb(228, 150, 7);
+}
+
+
+@media screen and (min-width: 720px) {
+    
+    
+    .carousel-caption h5{
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 25px;
+    }
+    
+}
+  

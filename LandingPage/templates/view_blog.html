@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %} View Blogs {% endblock %}
+
+
+{% block body %}
+
+{% if blogs | length < 1 %}
+<div class="text-center" style="margin-top: 100px;">
+    <h3>View all Blogs</h3>
+</div>
+{% else %}
+
+
+<div class="text-center" style="margin-top: 100px;">
+    <a class="btn btn-success" style="padding: 20px 10px; font-size: 20px;" href="{{ url_for('admin.add_blog') }}">Add Blog</a>
+</div>
+
+
+
+<table class="table table-dark table-hover" style="margin-top: 60px;">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Blog Title</th>
+            <th scope="col">Publish Blog</th>
+            <th scope="col">Date aded</th>
+            <th scope="col">Functions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for blog in blogs %}
+
+        <tr>
+            <th scope="row">{{ blog.id }}</th>
+            <td>{{ blog.blog_title }}</td>
+            <td>{{ blog.display_blog }}</td>
+            <td>{{ blog.date_added }}</td>
+
+            <td>
+                <a class="btn btn-info" href="/update-blog/{{ blog.id }}">Update</a>
+                <a class="btn btn-warning" href="/delete-blog/{{ blog.id }}">Delete</a>
+            </td>
+
+        </tr>
+
+
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endif %}
+
+
+{% endblock %}

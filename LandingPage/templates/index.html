@@ -1,0 +1,284 @@
+{% extends 'base.html' %}
+
+{% block title %} Affordable Land in Kiambu County {% endblock %}
+
+{% block body %}
+
+
+
+<video autoplay loop muted class="background-clip">
+    <source src="../static/images/landingvid.mp4">
+</video> 
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-caption">
+                <h5 class="animate__animated animate__bounce animate__repeat-2" style="animation-delay: 1s;">Invest in Land! They are not making it any more!</h5>
+                <p class="animate__animated animate__fadeInLeft" style="animation-delay: 3s;">Is it your first time in the page? Well welcome. I am one of the best real estate advisor there is. </p>
+                <a href="https://api.whatsapp.com/send?phone=254705203169&text=Hello!%20Aernest%20I%20am%20interested%20in%20Investing%20in%20real%20estate%20.%20.%20.%20" class="animate__animated animate__fadeInUp" style="animation-delay: 4s; font-size: 20px; background: rgb(7, 238, 7);">
+                    <i class="fa-brands fa-whatsapp"></i> Hello
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-caption">
+                <h5 class="animate__animated animate__shakeY" style="animation-delay: 1s;">The best time to invest in land is now!</h5>
+                <p class="animate__animated animate__fadeInRight" style="animation-delay: 3s;">We as african associate ourselve with land or a place you can call home. If thats the case for you then feel free the exprole all our project and get in touch  so that we can fulfill your dreams</p>
+                <a href="https://api.whatsapp.com/send?phone=254705203169&text=Hello!%20Aernest%20I%20am%20interested%20in%20Investing%20in%20real%20estate%20.%20.%20.%20" class="animate__animated animate__fadeInUp" style="animation-delay: 4s; font-size: 20px; background: rgb(7, 238, 7);">
+                    <i class="fa-brands fa-whatsapp"></i> Hello
+                </a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+<div class="wrapper">
+    <div class="wrapper-content">
+        <i class="fa fa-times-circle close" aria-hidden="true"></i>
+        <h2 class="text-center">Hello there!</h2>
+        <h3 class="text-center">Are you actively looking for land?</h3>
+        <form class="container" method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+            <label for="exampleInputEmail1">Enter your Name</label>
+            {{ form.client_name(class="form-control", size=32)}}
+            </div><br>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enter Phone Number</label>
+                {{ form.phone_number(class="form-control")}}
+            </div><br>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enter preferred Land Location</label>
+                {{ form.land_location(class="form-control")}}
+            </div><br>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enter your Budget</label>
+                {{ form.budget(class="form-control")}}
+            </div><br>
+            {{ form.submit(class="btn btn-info form-control")}}
+        </form>
+    </div>
+</div>
+
+
+<div class="container mt-5">
+    <div id="who-am-i">
+        <h2>Why us?</h2>
+        <hr>
+        
+        <p>
+            Hello there! I am not sure if this is for you, but wait! If you are looking for the more affordable Land within Nairobi where you can 
+            easly commute from and to work, then you have landed on the right place.
+        </p>
+
+        <p>
+            I am a Relationship Manager currently working with <strong>Fusion estates</strong> and my main goal is to hold your hand as you
+            begin your Investment journey.
+        </p>
+
+        <p>
+            Not yet convinced? Now I am sure you are thinking to start or have already started a family and you want a place you can call home.
+            Where you can be free from paying rent, Knowing where to buy land is a challange!.
+        </p>
+
+        <p>Believe me when I say this, many guys don't have an answer to this question!</p>
+
+        <p>Now let me ask you, what if I let you that you can own land in a area just 45 kilometers from town? Just stick around and let me guide you.</p>
+    </div>
+
+
+    <div id="how-to-invest" class="mt-5">
+        <h2>How to Invest</h2>
+        <hr>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading1">
+                <button class="accordion-button collapsed" style="background: gray;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
+                  First, Understand what you are looking for!
+                </button>
+              </h2>
+              <div id="flush-collapse1" class="accordion-collapse collapse" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    Now I know this might be a very hard question, but to help you understand ask yourself if you are looking for speculation purporses or your aim is to build your home.
+                    Speculation is a case where you just want to invest and resell later at a better price.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
+                    Second, Choose the best real estate company in the market.
+                  </button>
+                </h2>
+                <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      How you look and where do you start? The easiest way is to go online and look for the track record of different companies. That is, Do they have any scandal? Do they deliver what they say? Are they registered?
+                      Do they have a permanent physical place where they can be reached? These are the question you should start with then move to the next. 
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
+                Third, Pay them a visit and even schedule for a site visit.
+              </button>
+            </h2>
+            <div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  Make sure you have visited their office to find out more information then schedule for a site visit. Now while at site make sure you have seen permanet beacons, and make a point of asking around in the community about the land 
+                  so as to secure your investment. Also make sure you have asked for the title deed before placing any deposit.
+              </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                Fourth, Conduct a title deed search at the land registry.
+              </button>
+            </h2>
+            <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                 The main purpose of a title deed search is to confirm the land owner and also to if the land is in the general map of the area. This is important as you done want to deposit your money on 
+                 someone else land. If the land is not registered in the name of the person or company selling, then its wise not to continue with the transaction.
+              </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+                Fifth, Placing a deposit and signing of the sales agreement.
+              </button>
+            </h2>
+            <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  After making sure that everything is in order, choose the best payment plan that works for you and then place a deposit. Then you will have to sign the sales agrement which is a legal document that contains all the neccessary information about the 
+                  purchase and terms and conditions. Make sure you understand and agree to everything in the sales agreement.
+              </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+                finally, Sign the concent and trnafer forms for title registration.
+              </button>
+            </h2>
+            <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  The last step after competion of payment, the vendor should provide ypu with the transfer and concent forms with are used in the land register to register the title deed in your name. After that wait for the title to be processed in your name. 
+                  Now you know every step for investing in land. For any assistance you can contact me at <strong>anjuki@fusionestatesafrica.com</strong> or call me at <strong>+254705 203 169</strong>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="projects" class="mt-5">
+        <h2>Our Projects</h2>
+        <hr>
+        <div class="row mt-5">
+            {% for project in projects %}
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <img src="{{ project.project_image}}" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Plots for sale in {{ project.title}}</h5><br>
+                        <div class="card-text">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h6>Size</h6>
+                                </div>
+                                <div class="col-sm-4">
+                                    50 by 100 
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h6>Location</h6>
+                                </div>
+                                <div class="col-sm-4">
+                                    {{ project.location }}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h6>Price</h6>
+                                </div>
+                                <div class="col-sm-4">
+                                    Ksh {{ project.price}}
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <a href="{{url_for('views.about_project', id=project.id)}}" class="btn btn-info">More Info</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <div id="blog" class="mt-5">
+        <h2>Blog Section</h2>
+        <hr>
+        {% for blog in blogs %}
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="{{ blog.blog_image }}" alt="" class="img-thumbnail">
+            </div>
+            <div class="col-sm-6">
+                <h3 style="font-weight: bold;">{{ blog.blog_title }}</h3>
+                <br>
+                <div>{{ blog.blog_content[:100] }}</div>
+                <a href=" {{ url_for('views.blog_contents', blog_id=blog.id)}}" class="btn btn-primary">Read More</a>
+            </div>
+        </div><hr>
+        {% endfor %}
+    </div>
+
+
+    <div id="get-intouch" class="mt-5">
+        <h2>Get Intouch on Email</h2>
+        <hr>
+        <form class="container form-group" method="POST">
+            {{ email_form.hidden_tag()  }}
+            <div class="form-group">
+              <label for="exampleInputEmail1">User name</label>
+              {{ email_form.username(class="form-control")  }}
+            </div><br>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                {{ email_form.email(class="form-control")  }}
+            </div><br>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Subject</label>
+                {{ email_form.subject(class="form-control")  }}
+            </div><br>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Message</label>
+                {{ email_form.message(class="form-control")  }}
+            </div><br>
+            <div class="text-center form-group">
+                {{  email_form.submit(class="btn btn-info") }}
+            </div>
+            
+        </form>
+    </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %} Interested Clients {% endblock %}
+
+
+{% block body %}
+
+{% if clients | length < 1 %}
+<h3 style="color: white;">View the interested clients</h3>
+
+{% else %}
+
+<table class="table table-dark table-hover" style="margin-top: 60px;">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Client Name</th>
+            <th scope="col">Client Phone</th>
+            <th scope="col">Preffered Location</th>
+            <th scope="col">Their Budget</th>
+            <th scope="col">Date Added</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for client in clients %}
+
+        <tr>
+            <th scope="row">{{ client.id }}</th>
+            <td>{{ client.client_name }}</td>
+            <td>{{ client.phone_number }}</td>
+            <td>{{ client.land_location }}</td>
+            <td>{{ client.budget }}</td>
+            <td>{{ client.date_added }}</td>
+
+        </tr>
+
+
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endif %}
+
+
+{% endblock %}
